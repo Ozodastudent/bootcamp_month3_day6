@@ -1,0 +1,621 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+* {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.container {
+  max-width: 1392px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.header {
+  position: relative;
+  background-color: #4abdf2;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.head-logo {
+  text-decoration: none;
+}
+.logo-desktop {
+  display: none;
+}
+
+.nav {
+  display: none;
+  position: absolute;
+  top: 100px;
+  right: 50px;
+}
+.nav::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 40px 40px;
+  border-color: transparent transparent white transparent;
+  position: absolute;
+  top: -40px;
+  right: 0;
+}
+.nav-element {
+  width: 329px;
+  height: 305px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+}
+.nav-item + .nav-item {
+  margin-top: 32px;
+}
+.nav-link {
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: -0.142857px;
+  color: #808397;
+}
+.nav-link:hover {
+  color: black;
+}
+.nav-btn {
+  margin-top: 32px;
+  padding: 16px 30px;
+  background-color: rgba(251, 214, 0, 1);
+  border-radius: 28px;
+}
+.nav-btn:hover {
+  background-color: #24303e;
+}
+.nav-btn-link {
+  text-decoration: none;
+  font-family: "Fraunces", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.107143px;
+  text-transform: uppercase;
+  color: #24303e;
+}
+.nav-btn-link:hover {
+  color: #fbd600;
+}
+.toggle {
+  width: 24px;
+  height: 18px;
+  background-image: url(../6-lessonimg/toggle-open.png);
+  background-color: transparent;
+  border: none;
+}
+
+.header-open .nav {
+  display: block;
+}
+
+/* hero part */
+.hero {
+  background-image: url(../6-lessonimg/mobile-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* .hero-img {
+  display: flex;
+} */
+.hero-title {
+  margin-bottom: 52px;
+  font-family: "Fraunces", serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+  letter-spacing: 6.25px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.hero-box {
+  padding: 100px 24px 296px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* transform part */
+
+.card-img {
+  width: 100%;
+  /* height: 312px;
+  width: 375px; */
+}
+.card-img-desk {
+  display: none;
+}
+.card-title {
+  font-family: "Fraunces", serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+  letter-spacing: -0.228571px;
+  color: #24303e;
+}
+.card-text {
+  padding: 64px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-title-second {
+  font-family: "Fraunces", serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: -0.2px;
+
+  color: #24554a;
+}
+.card-desc {
+  margin: 24px 0;
+  font-family: "Barlow", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: -0.128571px;
+  color: #808397;
+}
+.card-desc-second {
+  margin-top: 24px;
+  font-family: "Barlow" sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: -0.114286px;
+
+  color: #24554a;
+}
+.card-link-decor {
+  position: relative;
+}
+.card-link {
+  text-decoration: none;
+  font-family: "Fraunces", serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+
+  letter-spacing: 1px;
+  color: #24303e;
+}
+.link-bottom {
+  position: absolute;
+  height: 10px;
+  width: 119px;
+  left: 0px;
+  top: 15px;
+  border-radius: 28px;
+
+  background-color: #fad400;
+  opacity: 0.25;
+}
+.bottom-second-color {
+  background-color: #fe7766;
+}
+.pink-mobile-img {
+  width: 100%;
+}
+.card-left {
+  background-image: url(../6-lessonimg/mobile-cherry.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 398px 0 0 58px;
+}
+.card-right {
+  background-image: url(../6-lessonimg/mobile-mandarin.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 398px 0 0 58px;
+}
+
+/* clients part */
+.clients {
+  padding: 64px 24px 86px 24px;
+}
+.client-title {
+  font-family: "Fraunces", serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 4px;
+  color: #a7aaad;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+}
+.card-info-des {
+  margin: 32px;
+  font-family: "Barlow", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: -0.128571px;
+  color: #5b636d;
+}
+
+.card-info-name {
+  margin-bottom: 9px;
+  font-family: "Fraunces", serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.128571px;
+  color: #24303e;
+}
+.card-info-position {
+  font-family: "Barlow,", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: -0.1px;
+  color: #a7aaad;
+}
+/* pre-footer */
+.pre-footer-box {
+  /* width: 410px; */
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+}
+.pre-footer-img {
+  width: 50%;
+  min-width: 188px;
+  height: 252px;
+}
+.pre-footer-img-desk {
+  display: none;
+}
+/* footer part */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 39px 80px 39px;
+  background-color: #90d4c6;
+}
+.footer_logo {
+  margin-bottom: 40px;
+}
+.footer-nav-tool {
+  margin-bottom: 88px;
+  display: flex;
+  list-style: none;
+}
+.footer-nav-link {
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.128571px;
+  color: #458d7e;
+}
+.footer-nav-link:hover {
+  color: white;
+}
+.footer-nav-item + .footer-nav-item {
+  margin-left: 57px;
+}
+.footer-icons {
+  display: flex;
+  list-style: none;
+}
+.icon-link {
+  text-decoration: none;
+}
+
+.icon-item + .icon-item {
+  margin-left: 28px;
+}
+@media only screen and (min-width: 650px) {
+  .toggle {
+    display: none;
+  }
+  .header {
+    position: static;
+    top: 0;
+    left: 0;
+  }
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo-mobile {
+    display: none;
+  }
+  .logo-desktop {
+    display: block;
+  }
+  .nav {
+    position: static;
+    display: block;
+  }
+  .nav::before {
+    display: none;
+  }
+  .nav-element {
+    width: 100%;
+    max-width: 467px;
+    height: 0;
+    background-color: #4abdf2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  .nav-item + .nav-item {
+    margin-top: 0px;
+  }
+  .nav-item + .nav-item {
+    margin-left: 20px;
+  }
+  .nav-link {
+    text-decoration: none;
+    font-family: "Barlow", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.128571px;
+    color: #ffffff;
+  }
+  .nav-link:hover {
+    color: black;
+  }
+  .nav-btn {
+    margin-top: 0;
+    margin-left: 20px;
+    padding: 16px 30px;
+    background-color: rgba(168, 223, 240, 0.418);
+    color: white;
+    border-radius: 28px;
+  }
+
+  .nav-btn-link {
+    text-decoration: none;
+    font-family: "Fraunces", serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.107143px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  /* hero part */
+
+  .hero {
+    background-image: url(../6-lessonimg/dektop_hero.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .hero-box {
+    padding: 100px 72px 296px 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-title {
+    font-size: 38px;
+    line-height: 42px;
+  }
+  .card-text {
+    padding: 94px 124px;
+  }
+  .card-title-second {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .card-desc {
+    margin: 30px 0;
+  }
+  .card-desc-second {
+    margin-top: 24px;
+    font-size: 18px;
+  }
+  .clients {
+    padding: 100px 124px 126px 124px;
+  }
+
+  .pre-footer-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .pre-footer-img {
+    display: none;
+  }
+  .pre-footer-img-desk {
+    display: block;
+    width: 50%;
+    min-width: 188px;
+    height: 442px;
+  }
+  .footer-nav-tool {
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .header {
+    padding: 34px 40px;
+  }
+  .nav-item + .nav-item {
+    margin-left: 47px;
+  }
+  .nav-link {
+    font-size: 18px;
+  }
+  .nav-btn {
+    margin-left: 47px;
+  }
+  .hero-title {
+    font-size: 54px;
+    line-height: 69px;
+    margin-bottom: 100px;
+  }
+  /* transform  */
+
+  .box-card {
+    display: flex;
+  }
+  .card-img {
+    display: none;
+  }
+  .egg-card {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .card-img-desk {
+    width: 675px;
+    display: block;
+  }
+  .card-text {
+    padding: 10px 89px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .card-title {
+    font-size: 38px;
+    line-height: 49px;
+    text-align: start;
+  }
+
+  .card-desc {
+    text-align: start;
+  }
+  .card-link-decor {
+    position: relative;
+  }
+  .pink-mobile-img {
+    width: 0;
+  }
+  .fruit-card {
+    display: flex;
+  }
+  .card-text-second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 60px 60px 60px;
+  }
+
+  .card-left {
+    background-image: url(../6-lessonimg/cherry.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 348px 0px 40px 50px;
+  }
+  .card-right {
+    background-image: url(../6-lessonimg/mandarin.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 348px 50px 40px 108px;
+  }
+
+  /* clients */
+
+  .clients {
+    padding: 160px 24px;
+  }
+  .client-cards {
+    display: flex;
+  }
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 64px;
+  }
+  .card-desc {
+    margin: 58px 0 69px 0;
+  }
+  .card-info + .card-info {
+    margin-left: 30px;
+  }
+  /* prefooter */
+
+  .pre-footer-box {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .pre-footer-img-desk {
+    display: block;
+    width: 50%;
+    min-width: 188px;
+    height: 422px;
+  }
+  .footer-nav-tool {
+    margin-bottom: 88px;
+  }
+}
