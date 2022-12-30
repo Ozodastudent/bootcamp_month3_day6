@@ -30,6 +30,9 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
+.containers {
+  margin: 0 auto;
+}
 .header {
   position: relative;
   background-color: #4abdf2;
